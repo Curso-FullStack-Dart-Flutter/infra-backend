@@ -5,7 +5,7 @@ services:
     container_name: mysql-curso-fullstack
     restart: always
     environment:
-      # MYSQL_DATABASE: 'dart'   
+      MYSQL_DATABASE: 'delivery'   
       MYSQL_USER: 'dart_user'
       MYSQL_PASSWORD: 'dart_pass'      
       MYSQL_ROOT_PASSWORD: 'root'
@@ -15,4 +15,4 @@ services:
       - '3306'
     volumes:
       - './volumes/mysql:/var/lib/mysql'
-      # - "./db.sql:/docker-entrypoint-initdb.d/1.sql"
+      - "./db.sql:/docker-entrypoint-initdb.d/database.sql"
